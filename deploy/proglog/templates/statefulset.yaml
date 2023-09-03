@@ -11,7 +11,7 @@ spec:
   replicas: {{ .Values.replicas }}
   template:
     metadata:
-      name: {{ include "proglog.fullname" }}
+      name: {{ include "proglog.fullname" . }}
       labels: {{ include "proglog.labels" . | nindent 8 }}
     spec:
       # initContainers
